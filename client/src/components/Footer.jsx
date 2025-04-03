@@ -11,9 +11,9 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-6 text-xl font-bold">
               <Shield className="w-6 h-6 text-white" />
-              <span className="text-transparent bg-gradient-to-r from-white to-gray-300 bg-clip-text"> SafeSign | GoVeltron </span>
+              <span className="text-transparent bg-gradient-to-r from-white to-gray-300 bg-clip-text"> SafeSign </span>
             </div>
-            <p className="mb-6 text-gray-300">The fast and secure way to sign documents electronically.</p>
+            <p className="mb-6 text-gray-300">Secure, Fast, and Reliable Contract Analysis – Powered by AI.</p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 transition-colors hover:text-white">
                 <svg
@@ -132,7 +132,7 @@ export function Footer() {
           </div>
         </div>
         <div className="pt-8 mt-12 text-center text-gray-300 border-t border-gray-700">
-          <p>© GoVeltron (SafeSign) 2025. All Rights Reserved.</p>
+          <p>© GoVeltron 2025. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
