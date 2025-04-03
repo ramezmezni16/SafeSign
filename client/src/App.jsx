@@ -4,33 +4,46 @@ import { useState } from "react"
 import { ArrowRight, CheckCircle, Cloud, FileText, Lock, MousePointer, Smile } from "lucide-react"
 import { Header } from "./components/Header"
 import { Footer } from "./components/Footer"
-import { Button } from "./components/ui/Button" // Changed to lowercase
+import { Button } from "./components/ui/Button"
 import SignIn from "./pages/Signin"
 import SignUp from "./pages/Signup"
 
 function App() {
-  // Simple routing state
   const [currentPage, setCurrentPage] = useState("home")
 
-  // Handle navigation
   const navigate = (page) => {
     setCurrentPage(page)
     window.scrollTo(0, 0)
   }
 
-  // Render the appropriate page based on currentPage state
   const renderPage = () => {
     switch (currentPage) {
       case "signin":
-        return <SignIn onNavigate={navigate} /> // Pass the navigation function
+        return <SignIn onNavigate={navigate} /> 
       case "signup":
-        return <SignUp onNavigate={navigate} /> // Pass the navigation function
+        return <SignUp onNavigate={navigate} />
       default:
         return (
           <div className="flex flex-col min-h-screen">
             <Header onNavigate={navigate} />
 
             <main className="flex-1">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
               {/* Hero Section */}
               <section className="relative py-20 overflow-hidden md:py-32">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-white -z-10"></div>
@@ -124,6 +137,23 @@ function App() {
                 </div>
               </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
               {/* Brands Section */}
               <section className="py-12 border-gray-100 border-y">
                 <div className="container px-4 mx-auto md:px-6">
@@ -137,6 +167,21 @@ function App() {
                   </div>
                 </div>
               </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
               {/* How It Works Section */}
               <section id="how-it-works" className="relative py-24">
@@ -207,6 +252,24 @@ function App() {
                 </div>
               </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
               {/* Benefits Section */}
               <section className="py-24 bg-white">
                 <div className="container px-4 mx-auto md:px-6">
@@ -276,6 +339,18 @@ function App() {
                   </div>
                 </div>
               </section>
+
+
+
+
+
+
+
+
+
+
+
+
 
               {/* Testimonials Section */}
               <section className="relative py-24">
@@ -396,6 +471,27 @@ function App() {
               </section>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
               {/* Pricing Section */}
               <section id="pricing" className="relative py-24 bg-white">
                 <div className="absolute top-0 right-0 rounded-full w-80 h-80 bg-blue-50 blur-3xl opacity-30 -z-10"></div>
@@ -482,6 +578,21 @@ function App() {
                   </div>
                 </div>
               </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
