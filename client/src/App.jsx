@@ -53,14 +53,14 @@ function App() {
                 <div className="container relative px-4 mx-auto md:px-6">
                   <div className="grid items-center gap-12 lg:grid-cols-2">
                     <div className="max-w-xl space-y-6">
-                      {/* still don't have any clients
+                      
                       
                       
                       <div className="inline-flex items-center rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-[#007BFF] mb-2">
                         <span className="flex h-2 w-2 rounded-full bg-[#007BFF] mr-2"></span>
                         Trusted by 10,000+ users
                       </div>
-                      */}
+                      
                       <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#212529] leading-tight">
                       {" "}
                       AI-Powered{" "}
@@ -90,7 +90,7 @@ function App() {
                           Learn More
                         </Button>
                       </div> 
-                      {/* still don't have any clients
+                      
                       <div className="flex items-center gap-4 pt-8">
                         <div className="flex -space-x-2">
                           <div className="flex items-center justify-center w-8 h-8 text-xs font-bold text-white bg-blue-400 rounded-full">
@@ -109,7 +109,7 @@ function App() {
                         <p className="text-sm text-[#343A40]/70">
                           Joined by <span className="font-medium text-[#343A40]">10,000+</span> professionals
                         </p>
-                      </div> */}
+                      </div>
                     </div>
                     <div className="relative flex justify-center">
                       <div className="absolute inset-0 transform opacity-50 bg-gradient-to-r from-blue-100 to-green-100 rounded-3xl blur-xl -z-10 rotate-3"></div>
@@ -161,7 +161,7 @@ function App() {
 
 
               {/* Brands Section */}
-              {/* not yet for now 
+              
               <section className="py-12 border-gray-100 border-y">
                 <div className="container px-4 mx-auto md:px-6">
                   <p className="mb-8 text-sm font-medium text-center text-gray-500">TRUSTED BY LEADING COMPANIES</p>
@@ -174,7 +174,7 @@ function App() {
                   </div>
                 </div>
               </section> 
-              */}
+              
 
 
 
@@ -684,7 +684,7 @@ function App() {
                       <p className="max-w-[700px] md:text-xl">
                         Join thousands of users who trust SafeSign for their document signing needs.
                       </p>
-                      <Button className="mt-6 bg-white text-[#8a66c4] hover:bg-gray-100 px-8 py-6 text-lg rounded-full shadow-lg shadow-blue-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5">
+                      <Button className="mt-6 bg-white text-sky-500 hover:bg-gray-100 px-8 py-6 text-lg rounded-full shadow-lg shadow-blue-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5">
                         Sign Up for Free <ArrowRight className="w-5 h-5 ml-2" />
                       </Button>
 
