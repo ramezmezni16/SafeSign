@@ -53,10 +53,14 @@ function App() {
                 <div className="container relative px-4 mx-auto md:px-6">
                   <div className="grid items-center gap-12 lg:grid-cols-2">
                     <div className="max-w-xl space-y-6">
+                      {/* still don't have any clients
+                      
+                      
                       <div className="inline-flex items-center rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-[#007BFF] mb-2">
                         <span className="flex h-2 w-2 rounded-full bg-[#007BFF] mr-2"></span>
                         Trusted by 10,000+ users
                       </div>
+                      */}
                       <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#212529] leading-tight">
                       {" "}
                       AI-Powered{" "}
@@ -85,7 +89,8 @@ function App() {
                         >
                           Learn More
                         </Button>
-                      </div>
+                      </div> 
+                      {/* still don't have any clients
                       <div className="flex items-center gap-4 pt-8">
                         <div className="flex -space-x-2">
                           <div className="flex items-center justify-center w-8 h-8 text-xs font-bold text-white bg-blue-400 rounded-full">
@@ -104,7 +109,7 @@ function App() {
                         <p className="text-sm text-[#343A40]/70">
                           Joined by <span className="font-medium text-[#343A40]">10,000+</span> professionals
                         </p>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="relative flex justify-center">
                       <div className="absolute inset-0 transform opacity-50 bg-gradient-to-r from-blue-100 to-green-100 rounded-3xl blur-xl -z-10 rotate-3"></div>
@@ -156,6 +161,7 @@ function App() {
 
 
               {/* Brands Section */}
+              {/* not yet for now 
               <section className="py-12 border-gray-100 border-y">
                 <div className="container px-4 mx-auto md:px-6">
                   <p className="mb-8 text-sm font-medium text-center text-gray-500">TRUSTED BY LEADING COMPANIES</p>
@@ -167,7 +173,8 @@ function App() {
                     ))}
                   </div>
                 </div>
-              </section>
+              </section> 
+              */}
 
 
 
@@ -294,7 +301,7 @@ function App() {
                         </div>
                         <h3 className="mb-4 text-xl font-bold">Security</h3>
                         <p className="text-[#343A40]/70">
-                          Your data is encrypted, and your documents are protected with enterprise-grade security.
+                        Your contracts are encrypted and securely stored, ensuring complete confidentiality and data protection.
                         </p>
                       </div>
                     </div>
@@ -307,7 +314,7 @@ function App() {
                         </div>
                         <h3 className="mb-4 text-xl font-bold">Ease of Use</h3>
                         <p className="text-[#343A40]/70">
-                          No complicated software – simply upload, sign, and share with our intuitive interface.
+                        No legal expertise required—upload your contract and get AI-powered insights in just a few clicks.
                         </p>
                       </div>
                     </div>
@@ -524,18 +531,23 @@ function App() {
                       <ul className="mt-8 space-y-5">
                         <li className="flex items-center">
                           <CheckCircle className="h-5 w-5 text-[#28A745] mr-3 flex-shrink-0" />
-                          <span>Sign up to 1 document per month</span>
+                          <span>3 Contract Analysis Per Month</span>
                         </li>
                         <li className="flex items-center">
                           <CheckCircle className="h-5 w-5 text-[#28A745] mr-3 flex-shrink-0" />
-                          <span>Basic document templates</span>
+                          <span>Basic insights</span>
                         </li>
                         <li className="flex items-center">
                           <CheckCircle className="h-5 w-5 text-[#28A745] mr-3 flex-shrink-0" />
-                          <span>Email support</span>
+                          <span>PDF, DOCX, TXT (Max 5MB)</span>
                         </li>
+                        <li className="flex items-center">
+                          <CheckCircle className="h-5 w-5 text-[#28A745] mr-3 flex-shrink-0" />
+                          <span>Basic explanations</span>
+                        </li>
+                        
                       </ul>
-                      <Button className="w-full mt-8 bg-gradient-to-r from-[#17A2B8] to-[#007BFF] hover:opacity-90 text-white rounded-full shadow-lg shadow-blue-100 transition-all duration-300 hover:shadow-xl hover:shadow-blue-200">
+                      <Button className="w-full mt-16 bg-gradient-to-r from-[#17A2B8] to-[#007BFF] hover:opacity-90 text-white rounded-full shadow-lg shadow-blue-100 transition-all duration-300 hover:shadow-xl hover:shadow-blue-200 ">
                         Get Started
                       </Button>
                     </div>
@@ -547,7 +559,7 @@ function App() {
                         Coming Soon
                       </div>
                       <h3 className="text-2xl font-bold bg-gradient-to-r from-[#28A745] to-[#17A2B8] bg-clip-text text-transparent">
-                        Pro
+                        Pro Plan
                       </h3>
                       <p className="mt-2 text-[#343A40]/70">Small Businesses & Legal Consultants</p>
                       <div className="flex items-end mt-6">
@@ -578,6 +590,10 @@ function App() {
                         <li className="flex items-center">
                           <CheckCircle className="h-5 w-5 text-[#28A745] mr-3 flex-shrink-0" />
                           <span>Downloadable Reports (PDF Export)</span>
+                        </li>
+                        <li className="flex items-center">
+                          <CheckCircle className="h-5 w-5 text-[#28A745] mr-3 flex-shrink-0" />
+                          <span>Customer Support</span>
                         </li>
                       </ul>
                       <Button className="w-full mt-8" variant="outline" disabled>
@@ -592,37 +608,41 @@ function App() {
                         Coming Soon
                       </div>
                       <h3 className="text-2xl font-bold bg-gradient-to-r from-[#632de2] to-[#b47021] bg-clip-text text-transparent">
-                        Pro
+                        Enterprise Plan
                       </h3>
-                      <p className="mt-2 text-[#343A40]/70">Small Businesses & Legal Consultants</p>
+                      <p className="mt-2 text-[#343A40]/70">Large Teams & Corporations</p>
                       <div className="flex items-end mt-6">
-                        <span className="text-5xl font-bold">$19</span>
-                        <span className="text-[#343A40]/70 ml-2">/month</span>
+                        <span className="text-5xl font-bold">Custom</span>
+                        <span className="text-[#343A40]/70 ml-2">pricing</span>
                       </div>
                       <ul className="mt-8 space-y-5">
                         <li className="flex items-center">
                           <CheckCircle className="h-5 w-5 text-[#28A745] mr-3 flex-shrink-0" />
-                          <span>Unlimited Contract Analysis</span>
+                          <span>Unlimited Contract Analysis + Priority Processing</span>
                         </li>
                         <li className="flex items-center">
                           <CheckCircle className="h-5 w-5 text-[#28A745] mr-3 flex-shrink-0" />
-                          <span>Advanced insights & recommendations</span>
+                          <span>Customizable risk assessment & compliance reports</span>
                         </li>
                         <li className="flex items-center">
                           <CheckCircle className="h-5 w-5 text-[#28A745] mr-3 flex-shrink-0" />
-                          <span>PDF, DOCX, TXT (Max 20MB)</span>
+                          <span>Bulk uploads (Large files supported))</span>
                         </li>
                         <li className="flex items-center">
                           <CheckCircle className="h-5 w-5 text-[#28A745] mr-3 flex-shrink-0" />
-                          <span>Advanced explanations with real-world examples</span>
+                          <span>Customizable explanations (Industry-specific)</span>
                         </li>
                         <li className="flex items-center">
                           <CheckCircle className="h-5 w-5 text-[#28A745] mr-3 flex-shrink-0" />
-                          <span>AI-generated summaries</span>
+                          <span> Detailed summaries with key highlights</span>
                         </li>
                         <li className="flex items-center">
                           <CheckCircle className="h-5 w-5 text-[#28A745] mr-3 flex-shrink-0" />
-                          <span>Downloadable Reports (PDF Export)</span>
+                          <span>Branded reports + API access</span>
+                        </li>
+                        <li className="flex items-center">
+                          <CheckCircle className="h-5 w-5 text-[#28A745] mr-3 flex-shrink-0" />
+                          <span>Dedicated account manager & priority support</span>
                         </li>
                       </ul>
                       <Button className="w-full mt-8" variant="outline" disabled>
