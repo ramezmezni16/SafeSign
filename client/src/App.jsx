@@ -684,7 +684,8 @@ function App() {
                       <p className="max-w-[700px] md:text-xl">
                         Join thousands of users who trust SafeSign for their document signing needs.
                       </p>
-                      <Button className="mt-6 bg-white text-sky-500 hover:bg-gray-100 px-8 py-6 text-lg rounded-full shadow-lg shadow-blue-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5">
+                      <Button className="mt-6 bg-white text-sky-500 hover:bg-gray-100 px-8 py-6 text-lg rounded-full shadow-lg shadow-blue-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5"
+                      onClick={() => navigate("signup")}>
                         Sign Up for Free <ArrowRight className="w-5 h-5 ml-2" />
                       </Button>
 

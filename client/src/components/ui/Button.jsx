@@ -5,7 +5,7 @@ export const Button = forwardRef(({ className, variant, size, children, ...props
     "inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none"
 
   const variants = {
-    default: "bg-[#007BFF] text-white hover:bg-[#0069d9]",
+    default: "bg-[#007BFF] hover:bg-[#0069d9]",
     outline: "border border-[#007BFF] text-[#007BFF] hover:bg-[#007BFF] hover:text-white",
     ghost: "hover:bg-gray-100",
   }
