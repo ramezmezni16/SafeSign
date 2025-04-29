@@ -1,19 +1,14 @@
 "use client"
 
 import { useState } from "react"
-import { Menu, Shield, X } from "lucide-react"
-import { Button } from "./ui/Button"
+import { Menu, X } from "lucide-react"
 
 export function MobileNav({ onNavigate }) {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
-    if (!isOpen) {
-      document.body.style.overflow = "hidden"
-    } else {
-      document.body.style.overflow = "auto"
-    }
+    document.body.style.overflow = !isOpen ? "hidden" : "auto"
   }
 
   const handleNavigation = (page) => {
@@ -23,83 +18,38 @@ export function MobileNav({ onNavigate }) {
 
   return (
     <>
-      <Button variant="ghost" className="p-2 md:hidden" onClick={toggleMenu}>
+      <button className="p-2 md:hidden" onClick={toggleMenu}>
         <Menu className="w-6 h-6" />
-        <span className="sr-only">Toggle menu</span>
-      </Button>
+      </button>
 
       {isOpen && (
-        <div className="fixed inset-0 z-50 bg-white md:hidden" onClick={toggleMenu}>
+        <div
+          className="fixed inset-0 z-50 p-6 bg-white md:hidden"
+          onClick={toggleMenu}
+        >
           <div
-            className="fixed top-0 left-0 bottom-0 w-[75%] max-w-sm bg-white p-6 shadow-lg"
+            className="w-full max-w-xs p-4 bg-white"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between mb-8">
-              <div className="flex items-center gap-2 text-xl font-bold">
-                <div className="relative">
-                  <Shield className="h-7 w-7 text-[#007BFF]" />
-                  <div className="absolute bg-blue-100 rounded-full -inset-1 blur-sm -z-10"></div>
-                </div>
-                <span className="bg-gradient-to-r from-[#007BFF] to-[#17A2B8] bg-clip-text text-transparent">
-                  SafeSign
-                </span>
-              </div>
-              <Button variant="ghost" className="p-2" onClick={toggleMenu}>
+            <div className="flex items-center justify-between mb-4">
+              <span className="text-xl font-bold">Menu</span>
+              <button onClick={toggleMenu}>
                 <X className="w-6 h-6" />
-                <span className="sr-only">Close menu</span>
-              </Button>
+              </button>
             </div>
 
-            <nav className="flex flex-col gap-6 bg-white">
-              <a
-                href="#"
-                className="text-[#007BFF] font-medium text-lg"
-                onClick={(e) => {
-                  e.preventDefault()
-                  handleNavigation("home")
-                }}
+            <nav className="flex flex-col gap-4">
+              <a href="#" onClick={() => handleNavigation("home")}>Home</a>
+              <a href="#how-it-works" onClick={toggleMenu}>How It Works</a>
+              <a href="#pricing" onClick={toggleMenu}>Pricing</a>
+              <a href="/contact" onClick={toggleMenu}>Contact</a>
+              <a href="#" onClick={() => handleNavigation("signin")}>Login</a>
+              <button
+                onClick={() => handleNavigation("signup")}
+                className="p-2 text-white bg-blue-600 rounded"
               >
-                Home
-              </a>
-              <a
-                href="#how-it-works"
-                className="text-[#343A40] hover:text-[#007BFF] transition-colors text-lg"
-                onClick={toggleMenu}
-              >
-                How It Works
-              </a>
-              <a
-                href="#pricing"
-                className="text-[#343A40] hover:text-[#007BFF] transition-colors text-lg"
-                onClick={toggleMenu}
-              >
-                Pricing
-              </a>
-              <a
-                href="/contact"
-                className="text-[#343A40] hover:text-[#007BFF] transition-colors text-lg"
-                onClick={toggleMenu}
-              >
-                Contact
-              </a>
-              <div className="flex flex-col gap-4 mt-6">
-                <a
-                  href="#"
-                  className="text-[#343A40] hover:text-[#007BFF] transition-colors text-lg"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    handleNavigation("signin")
-                  }}
-                >
-                  Login
-                </a>
-                <Button
-                  className="bg-gradient-to-r from-[#17A2B8] to-[#007BFF] hover:opacity-90 text-white w-full mt-2 rounded-full shadow-md shadow-blue-100"
-                  onClick={() => handleNavigation("signup")}
-                >
-                  Sign Up
-                </Button>
-              </div>
+                Sign Up
+              </button>
             </nav>
           </div>
         </div>

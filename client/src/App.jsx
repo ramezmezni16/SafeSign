@@ -548,7 +548,8 @@ function App() {
                         </li>
                         
                       </ul>
-                      <Button className="w-full mt-16 bg-gradient-to-r from-[#17A2B8] to-[#007BFF] hover:opacity-90 text-white rounded-full shadow-lg shadow-blue-100 transition-all duration-300 hover:shadow-xl hover:shadow-blue-200 ">
+                      <Button className="w-full mt-16 bg-gradient-to-r from-[#17A2B8] to-[#007BFF] hover:opacity-90 text-white rounded-full shadow-lg shadow-blue-100 transition-all duration-300 hover:shadow-xl hover:shadow-blue-200 "
+                      onClick={() => navigate("signin")}>
                         Get Started
                       </Button>
                     </div>
