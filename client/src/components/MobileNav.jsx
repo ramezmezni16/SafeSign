@@ -29,7 +29,7 @@ export function MobileNav({ onNavigate }) {
       </Button>
 
       {isOpen && (
-        <div className="fixed inset-0 z-50 bg-black/20 backdrop-blur-sm md:hidden" onClick={toggleMenu}>
+        <div className="fixed inset-0 z-50 bg-white md:hidden" onClick={toggleMenu}>
           <div
             className="fixed top-0 left-0 bottom-0 w-[75%] max-w-sm bg-white p-6 shadow-lg"
             onClick={(e) => e.stopPropagation()}
@@ -50,7 +50,7 @@ export function MobileNav({ onNavigate }) {
               </Button>
             </div>
 
-            <nav className="flex flex-col gap-6">
+            <nav className="flex flex-col gap-6 bg-white">
               <a
                 href="#"
                 className="text-[#007BFF] font-medium text-lg"

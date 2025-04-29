@@ -7,6 +7,7 @@ import { Footer } from "./components/Footer"
 import { Button } from "./components/ui/Button"
 import SignIn from "./pages/Signin"
 import SignUp from "./pages/Signup"
+import contractImg from './components/images/contract.jpg';
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home")
@@ -115,11 +116,11 @@ function App() {
                       <div className="absolute inset-0 transform opacity-50 bg-gradient-to-r from-blue-100 to-green-100 rounded-3xl blur-xl -z-10 rotate-3"></div>
                       <div className="relative overflow-hidden transition-transform duration-500 transform bg-white border border-gray-100 shadow-2xl rounded-3xl shadow-blue-100/50 -rotate-2 hover:rotate-0">
                         <img
-                          src="https://placehold.co/600x500"
+                          src={contractImg}
                           alt="Person signing a document digitally"
                           className="object-cover rounded-t-lg"
-                          width={600}
-                          height={500}
+                          width={1000}
+                          height={1000}
                         />
                         <div className="p-6 bg-white">
                           <div className="flex items-center gap-4 mb-4">
@@ -128,7 +129,7 @@ function App() {
                             </div>
                             <div>
                               <h3 className="font-medium">Contract_Final.pdf</h3>
-                              <p className="text-sm text-gray-500">Signed 2 minutes ago</p>
+                              <p className="text-sm text-gray-500">Analysed 2 minutes ago</p>
                             </div>
                             <div className="ml-auto">
                               <div className="bg-green-100 text-green-700 text-xs font-medium px-2.5 py-0.5 rounded-full">
@@ -253,7 +254,8 @@ function App() {
                   </div>
 
                   <div className="flex justify-center mt-16">
-                    <Button className="bg-gradient-to-r from-[#17A2B8] to-[#007BFF] hover:opacity-90 text-white px-8 py-6 rounded-full shadow-lg shadow-blue-100 transition-all duration-300 hover:shadow-xl hover:shadow-blue-200 hover:-translate-y-0.5">
+                    <Button className="bg-gradient-to-r from-[#17A2B8] to-[#007BFF] hover:opacity-90 text-white px-8 py-6 rounded-full shadow-lg shadow-blue-100 transition-all duration-300 hover:shadow-xl hover:shadow-blue-200 hover:-translate-y-0.5"
+                    onClick={() => navigate("signup")}>
                       Try It Now <ArrowRight className="w-5 h-5 ml-2" />
                     </Button>
                   </div>
@@ -469,7 +471,7 @@ function App() {
 
                   <div className="flex justify-center mt-16">
                     <Button 
-                      onClick={() => onNavigate && onNavigate("signup")}
+                      onClick={() => navigate("signup")}
                       className="bg-gradient-to-r from-[#28A745] to-[#17A2B8] hover:opacity-90 text-white px-8 py-6 rounded-full shadow-lg shadow-green-100 transition-all duration-300 hover:shadow-xl hover:shadow-green-200 hover:-translate-y-0.5"
                     >
                       Start for Free <ArrowRight className="w-5 h-5 ml-2" />
@@ -526,12 +528,11 @@ function App() {
                       <p className="mt-2 text-[#343A40]/70">Individuals & Freelancers</p>
                       <div className="flex items-end mt-6">
                         <span className="text-5xl font-bold">$0</span>
-                        <span className="text-[#343A40]/70 ml-2">/month</span>
                       </div>
                       <ul className="mt-8 space-y-5">
                         <li className="flex items-center">
                           <CheckCircle className="h-5 w-5 text-[#28A745] mr-3 flex-shrink-0" />
-                          <span>3 Contract Analysis Per Month</span>
+                          <span>3 Contract Analysis</span>
                         </li>
                         <li className="flex items-center">
                           <CheckCircle className="h-5 w-5 text-[#28A745] mr-3 flex-shrink-0" />
