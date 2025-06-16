@@ -12,8 +12,11 @@ export default function SignIn({ onNavigate }) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Handle sign in logic
+    // Simulate sign-in logic
     console.log({ email, password, rememberMe })
+
+    // After sign-in success, navigate to dashboard
+    onNavigate("dashboard")
   }
 
   return (
@@ -156,6 +159,7 @@ export default function SignIn({ onNavigate }) {
                   type="button"
                   className="flex justify-center items-center py-2.5 px-4 rounded-xl border border-gray-200 hover:bg-gray-50 transition-colors"
                 >
+                  {/* Google Icon */}
                   <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
                     <path
                       d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
@@ -180,6 +184,7 @@ export default function SignIn({ onNavigate }) {
                   type="button"
                   className="flex justify-center items-center py-2.5 px-4 rounded-xl border border-gray-200 hover:bg-gray-50 transition-colors"
                 >
+                  {/* Facebook Icon */}
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z" />
                   </svg>
