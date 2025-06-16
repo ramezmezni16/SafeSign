@@ -5,7 +5,8 @@ import { openai } from "@ai-sdk/openai"
 
 export async function analyzeContract(contractText) {
   try {
-    // Call streamText to get an async iterable stream of text chunks
+    console.log("Contract text to analyze:", contractText) // Log input contract text
+
     const { textStream } = await streamText({
       model: openai("gpt-4o"),
       system: `You are a legal contract analysis expert. Analyze the provided contract thoroughly and return a JSON response ONLY, strictly in this exact format without any extra text or explanations:
@@ -27,16 +28,23 @@ export async function analyzeContract(contractText) {
 
 Make sure the JSON is valid and parsable. Do NOT include any text outside the JSON.`,
       prompt: `Analyze the following contract text:\n\n${contractText}`,
+      temperature: 0.7  // add this to get varied answers
     })
 
-    // Collect all chunks into one string
     let fullResponse = ""
     for await (const chunk of textStream) {
       fullResponse += chunk
     }
 
-    // Attempt to parse the response as JSON
-    const parsed = JSON.parse(fullResponse)
+    console.log("Full response from AI:", fullResponse) // Log full AI response
+
+    // Try to parse JSON safely by extracting JSON from response
+    const jsonMatch = fullResponse.match(/\{[\s\S]*\}/) 
+    if (!jsonMatch) {
+      throw new Error("No JSON object found in AI response")
+    }
+
+    const parsed = JSON.parse(jsonMatch[0])
     return parsed
 
   } catch (error) {
@@ -44,3 +52,4 @@ Make sure the JSON is valid and parsable. Do NOT include any text outside the JS
     throw new Error("Failed to analyze contract: " + (error.message || error.toString()))
   }
 }
+
