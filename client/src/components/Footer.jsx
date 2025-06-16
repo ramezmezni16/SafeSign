@@ -132,7 +132,7 @@ export function Footer() {
           </div>
         </div>
         <div className="pt-8 mt-12 text-center text-gray-300 border-t border-gray-700">
-          <p>© GoVeltron 2025. All Rights Reserved.</p>
+          <p>© Created By Ramez Mezni. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
