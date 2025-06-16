@@ -23,6 +23,8 @@ function App() {
         return <SignIn onNavigate={navigate} /> 
       case "signup":
         return <SignUp onNavigate={navigate} />
+      case "dashboard":
+        return <Dashboard onNavigate={navigate} />;
       default:
         return (
           <div className="flex flex-col min-h-screen">
