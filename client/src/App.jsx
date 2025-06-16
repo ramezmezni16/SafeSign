@@ -5,6 +5,7 @@ import { ArrowRight, CheckCircle, Cloud, FileText, Lock, MousePointer, Smile } f
 import { Header } from "./components/Header"
 import { Footer } from "./components/Footer"
 import { Button } from "./components/ui/Button"
+import Dashboard from "./pages/analyze/Dashboard"
 import SignIn from "./pages/Signin"
 import SignUp from "./pages/Signup"
 import contractImg from './components/images/contract.jpg';
@@ -29,6 +30,7 @@ function App() {
         return (
           <div className="flex flex-col min-h-screen">
             <Header onNavigate={navigate} />
+            <Dashboard onNavigate={navigate} />
 
             <main className="flex-1">
 

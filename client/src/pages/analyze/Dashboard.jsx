@@ -5,7 +5,7 @@ import { Upload, FileText, AlertCircle, CheckCircle, Download, ArrowLeft, Loader
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 
-export default function AnalyzePage() {
+export default function Dashboard() {
   const [file, setFile] = useState(null)
   const [isAnalyzing, setIsAnalyzing] = useState(false)
   const [analysis, setAnalysis] = useState(null)
