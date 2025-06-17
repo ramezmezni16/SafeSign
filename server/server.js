@@ -11,7 +11,7 @@ app.use(cors())
 app.use(express.json())
 
 // Import routes
-const contractRoutes = require("./routes/contract.routes")
+const contractRoutes = require("./routes/contractRoutes")
 app.use("/api", contractRoutes)
 
 app.listen(PORT, () => {

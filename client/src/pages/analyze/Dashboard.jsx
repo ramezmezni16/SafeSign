@@ -75,10 +75,11 @@ export default function Dashboard() {
     formData.append("file", file)
 
     // Call your API or AI SDK here — example using fetch
-    const response = await fetch("/api/analyze-contract", {
-      method: "POST",
-      body: formData,
+    const response = await ffetch("http://localhost:3000/api/analyze-contract", {
+        method: "POST",
+        body: formData,
     })
+
 
     if (!response.ok) {
       throw new Error("Failed to analyze contract")
