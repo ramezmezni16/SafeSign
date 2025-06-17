@@ -65,36 +65,33 @@ export default function Dashboard() {
   }
 
   const analyzeContract = async () => {
-  if (!file) return
+  if (!file) return;
 
-  setIsAnalyzing(true)
+  setIsAnalyzing(true);
 
   try {
-    // Prepare your file data, e.g., as FormData or base64 depending on your API
-    const formData = new FormData()
-    formData.append("file", file)
+    const formData = new FormData();
+    formData.append("file", file);
 
-    // Call your API or AI SDK here — example using fetch
     const response = await fetch("http://localhost:5001/api/analyze-contract", {
-        method: "POST",
-        body: formData,
-    })
-
+      method: "POST",
+      body: formData, // 👈 send formData instead of JSON
+      // don't set Content-Type manually; browser will do it for FormData
+    });
 
     if (!response.ok) {
-      throw new Error("Failed to analyze contract")
+      throw new Error("Failed to analyze contract");
     }
 
-    const result = await response.json()
-
-    // Assuming result has the same shape as your current static object
-    setAnalysis(result)
+    const result = await response.json();
+    setAnalysis(result);
   } catch (error) {
-    alert("Error analyzing contract: " + error.message)
+    alert("Error analyzing contract: " + error.message);
   } finally {
-    setIsAnalyzing(false)
+    setIsAnalyzing(false);
   }
-}
+};
+
 
 
   const resetAnalysis = () => {
